@@ -67,3 +67,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+h1 {
+  @apply text-6xl font-bold;
+}
