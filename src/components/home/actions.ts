@@ -6,16 +6,14 @@ import { TermSearchResult } from '@/src/types/TermSearchResult';
 
 export async function getSearch(terms: string[]) {
   const client = new GoogleAdsApi({
-    client_id:
-      '79934131824-ki9bpkagkncuvo97t8885nkrdd9hs4ii.apps.googleusercontent.com',
-    client_secret: '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',
-    developer_token: '0Ge1CwiDAEg6TBM6V6sf_A'
+    client_id: process.env.G_CLIENT_ID,
+    client_secret: process.env.G_CLIENT_SECRET,
+    developer_token: process.env.G_DEVELOPER_TOKEN
   });
 
   const customer = client.Customer({
     customer_id: '3790493486',
-    refresh_token:
-      '1//04oPvEmaU05S9CgYIARAAGAQSNwF-L9Ir5rv6I4ZQU3aleqYP15wUvHoMVWjh4qcKkcebEkV--DyoNbgEXcrjsumEpqhbVMZaAQU'
+    refresh_token: process.env.G_REFERSH_TOKEN
   });
 
   const request = services.GenerateKeywordHistoricalMetricsRequest.create({
