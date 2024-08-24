@@ -1,9 +1,9 @@
-import Search from '@/components/home/search';
+import Search from '@/src/components/home/Search';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="w-full px-4 sm:px-10 md:px-20 lg:px-40 flex flex-col items-center justify-center">
+    <div className="w-full px-4 sm:px-10 md:px-20 lg:fpx-40 flex flex-col items-center justify-center">
       <nav className="flex p-6 pb-20 text-2xl w-full justify-start">
         SearchCap
         <Image
